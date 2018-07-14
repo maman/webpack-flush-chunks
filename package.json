@@ -68,6 +68,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/faceyspacey/@maman/webpack-flush-chunks.git"
+    "url": "https://github.com/maman/webpack-flush-chunks.git"
   }
 }
