@@ -1,4 +1,4 @@
-declare module 'webpack-flush-chunks' {
+declare module '@maman/webpack-flush-chunks' {
   import { Stats } from 'webpack';
 
   export default function flushChunks(

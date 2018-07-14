@@ -229,7 +229,8 @@ const chunksToResolve = ({
   checkChunkNames?: boolean
 }): Array<string> =>
   chunkNames
-    .reduce((names, name) => {
+    .reduce((names, _name) => {
+      const name = _name.replace('/', '-')
       if (!hasChunk(name, stats.assetsByChunkName, checkChunkNames)) {
         return names
       }

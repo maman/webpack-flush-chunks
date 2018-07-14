@@ -72,7 +72,7 @@ Lastly *server/render.js* which you should be familiar with by now looks like th
 import React from 'react'
 import ReactDOM from 'react-dom/server'
 import { flushChunkNames } from 'react-universal-component/server'
-import flushChunks from 'webpack-flush-chunks'
+import flushChunks from '@maman/webpack-flush-chunks'
 import App from '../src/components/App'
 
 export default ({ clientStats }) => (req, res) => {

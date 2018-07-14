@@ -11,28 +11,28 @@
 
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/webpack-flush-chunks">
-    <img src="https://img.shields.io/npm/v/webpack-flush-chunks.svg" alt="Version" />
+  <a href="https://www.npmjs.com/package/@maman/webpack-flush-chunks">
+    <img src="https://img.shields.io/npm/v/@maman/webpack-flush-chunks.svg" alt="Version" />
   </a>
 
-  <a href="https://travis-ci.org/faceyspacey/webpack-flush-chunks">
-    <img src="https://travis-ci.org/faceyspacey/webpack-flush-chunks.svg?branch=master" alt="Build Status" />
+  <a href="https://travis-ci.org/faceyspacey/@maman/webpack-flush-chunks">
+    <img src="https://travis-ci.org/faceyspacey/@maman/webpack-flush-chunks.svg?branch=master" alt="Build Status" />
   </a>
 
-  <a href="https://lima.codeclimate.com/github/faceyspacey/webpack-flush-chunks/coverage">
-    <img src="https://lima.codeclimate.com/github/faceyspacey/webpack-flush-chunks/badges/coverage.svg" alt="Coverage Status"/>
+  <a href="https://lima.codeclimate.com/github/faceyspacey/@maman/webpack-flush-chunks/coverage">
+    <img src="https://lima.codeclimate.com/github/faceyspacey/@maman/webpack-flush-chunks/badges/coverage.svg" alt="Coverage Status"/>
   </a>
 
-  <a href="https://lima.codeclimate.com/github/faceyspacey/webpack-flush-chunks">
-    <img src="https://lima.codeclimate.com/github/faceyspacey/webpack-flush-chunks/badges/gpa.svg" alt="GPA" />
+  <a href="https://lima.codeclimate.com/github/faceyspacey/@maman/webpack-flush-chunks">
+    <img src="https://lima.codeclimate.com/github/faceyspacey/@maman/webpack-flush-chunks/badges/gpa.svg" alt="GPA" />
   </a>
 
-  <a href="https://www.npmjs.com/package/webpack-flush-chunks">
-    <img src="https://img.shields.io/npm/dt/webpack-flush-chunks.svg" alt="Downloads" />
+  <a href="https://www.npmjs.com/package/@maman/webpack-flush-chunks">
+    <img src="https://img.shields.io/npm/dt/@maman/webpack-flush-chunks.svg" alt="Downloads" />
   </a>
 
-  <a href="https://www.npmjs.com/package/webpack-flush-chunks">
-    <img src="https://img.shields.io/npm/l/webpack-flush-chunks.svg" alt="License" />
+  <a href="https://www.npmjs.com/package/@maman/webpack-flush-chunks">
+    <img src="https://img.shields.io/npm/l/@maman/webpack-flush-chunks.svg" alt="License" />
   </a>
 </p>
 
@@ -42,7 +42,7 @@
 </p>
 
 > **Now supports Webpack 4 aggressive code splitting**
-We have updated `webpack-flush-chunks` to now support more complex code splitting! `webpack-flush-chunks` enables developers to leverage smarter and less wasteful chunking methods avaliable to developers inside of Webpack.
+We have updated `@maman/webpack-flush-chunks` to now support more complex code splitting! `@maman/webpack-flush-chunks` enables developers to leverage smarter and less wasteful chunking methods avaliable to developers inside of Webpack.
 
 <p align="center">
   <img src="./poo.jpg" height="350" />
@@ -52,7 +52,7 @@ Use this package server-side to flush webpack chunks from *[React Universal Comp
 
 ```js
 import { flushChunkNames } from 'react-universal-component/server'
-import flushChunks from 'webpack-flush-chunks'
+import flushChunks from '@maman/webpack-flush-chunks'
 
 const app = ReactDOMServer.renderToString(<App />)
 const { js, styles } = flushChunks(webpackStats, {
@@ -140,7 +140,7 @@ The dream of **code-splitting everywhere** is finally here.
 
 **Reactlandia Articles:**
 
-- [code-cracked-for-ssr-plus-splitting-in-reactlandia](https://medium.com/@faceyspacey/code-cracked-for-code-splitting-ssr-in-reactlandia-react-loadable-webpack-flush-chunks-and-1a6b0112a8b8)
+- [code-cracked-for-ssr-plus-splitting-in-reactlandia](https://medium.com/@faceyspacey/code-cracked-for-code-splitting-ssr-in-reactlandia-react-loadable-@maman/webpack-flush-chunks-and-1a6b0112a8b8)
 
 - [announcing-react-universal-component-2-and-babel-plugin-universal-import](https://medium.com/faceyspacey/announcing-react-universal-component-2-0-babel-plugin-universal-import-5702d59ec1f4) 🚀
 
@@ -151,7 +151,7 @@ The dream of **code-splitting everywhere** is finally here.
 ## Installation
 
 ```
-yarn add react-universal-component webpack-flush-chunks 
+yarn add react-universal-component @maman/webpack-flush-chunks 
 yarn add --dev babel-plugin-universal-import extract-css-chunks-webpack-plugin
 ```
 - ***[Babel Plugin Universal Import](https://github.com/faceyspacey/babel-plugin-universal-import)*** is used to make `react-universal-component` as frictionless as possible. It removes the need to provide additional options to insure synchronous rendering happens on the server and on the client on initial load. These packages aren't required, but usage as frictionless as possible.
@@ -235,7 +235,7 @@ export default () =>
 ```js
 import ReactDOMServer from 'react-dom/server'
 import { flushChunkNames } from 'react-universal-component/server'
-import flushChunks from 'webpack-flush-chunks'
+import flushChunks from '@maman/webpack-flush-chunks'
 
 const app = ReactDOMServer.renderToString(<App />)
 const chunkNames = flushChunkNames()
@@ -280,7 +280,7 @@ the webpack bootstrap code has info about the chunks/modules used in your bundle
 your `vendor` chunk you need to extract the bootstrap code into its own small chunk file. If this is new to you, don't worry.
 [Below](#webpack-configuration) you will find examples for exactly how to specify your Webpack config. Lastly, you do not need to provide this option if you have a `bootstrap` chunk, or `vendor` chunk or both, as those are the defaults.~~
 
-Mostly related to Webpack 2 & 3. It is still very useful if you need to load a specific chunk name **first** `webpack-flush-chunks` now can rely on a better chunk graph provided by Webpack 4 - chunks are loaded in the correct order with more autonomy.
+Mostly related to Webpack 2 & 3. It is still very useful if you need to load a specific chunk name **first** `@maman/webpack-flush-chunks` now can rely on a better chunk graph provided by Webpack 4 - chunks are loaded in the correct order with more autonomy.
 
 - **after** - ***array of named entries that come AFTER your dynamic chunks:*** 
 ~~Similar to `before`, `after` contains an array of chunks you want to come after the dynamic chunks that
@@ -403,12 +403,12 @@ so it can be run synchronously.
 
 ## Externals
 If you're specifying externals to leave unbundled, you need to tell Webpack
-to still bundle `react-universal-component` and `webpack-flush-chunks` so that they know they are running within Webpack. For example:
+to still bundle `react-universal-component` and `@maman/webpack-flush-chunks` so that they know they are running within Webpack. For example:
 
 ```js
 const externals = fs
   .readdirSync(modeModules)
-  .filter(x => !/\.bin|react-universal-component|webpack-flush-chunks/.test(x))
+  .filter(x => !/\.bin|react-universal-component|@maman/webpack-flush-chunks/.test(x))
   .reduce((externals, mod) => {
     externals[mod] = `commonjs ${mod}`
     return externals
@@ -424,7 +424,7 @@ For advanced users that want access to all files flushed (`.js`, `.css` or whate
 
 ```js
 import { flushChunkNames } from 'react-universal-component/server'
-import { flushFiles } from 'webpack-flush-chunks'
+import { flushFiles } from '@maman/webpack-flush-chunks'
 
 const chunkNames = flushChunkNames()
 const scripts = flushFiles(stats, { chunkNames, filter: 'js' })
@@ -465,7 +465,7 @@ Reviewing a package's tests are a great way to get familiar with it. It's direct
 
 Below is a screenshot of this module's tests running in [Wallaby](https://wallabyjs.com) *("An Integrated Continuous Testing Tool for JavaScript")* which everyone in the React community should be using. It's fantastic and has taken my entire workflow to the next level. It re-runs your tests on every change along with comprehensive logging, bi-directional linking to your IDE, in-line code coverage indicators, **and even snapshot comparisons + updates for Jest!** I requestsed that feature by the way :). It's basically a substitute for live-coding that inspires you to test along your journey.
 
-![webpack-flush-chunks wallaby tests screenshot](./tests-screenshot.png)
+![@maman/webpack-flush-chunks wallaby tests screenshot](./tests-screenshot.png)
 
 ## More from FaceySpacey in Reactlandia
 - [redux-first-router](https://github.com/faceyspacey/redux-first-router). It's made to work perfectly with *Universal*. Together they comprise our *"frameworkless"* Redux-based approach to what Next.js does (splitting, SSR, prefetching, and routing). *People are lovin it by the way* 😎

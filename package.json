@@ -1,5 +1,5 @@
 {
-  "name": "webpack-flush-chunks",
+  "name": "@maman/webpack-flush-chunks",
   "version": "0.0.0-placeholder",
   "description": "flush webpack chunks for SSR from React Loadable or similar packages",
   "main": "dist/flushChunks.js",
@@ -68,6 +68,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/faceyspacey/webpack-flush-chunks.git"
+    "url": "https://github.com/faceyspacey/@maman/webpack-flush-chunks.git"
   }
 }
